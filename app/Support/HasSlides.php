@@ -5,6 +5,7 @@ namespace App\Support;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Locked;
 use Livewire\Attributes\On;
+use Livewire\Attributes\Renderless;
 use Livewire\Component;
 
 /**
@@ -20,6 +21,7 @@ trait HasSlides
     #[Locked]
     public int $slide = 0;
 
+    #[Renderless]
     #[On('previous-slide')]
     public function prev(): void
     {
@@ -32,6 +34,7 @@ trait HasSlides
         }
     }
 
+    #[Renderless]
     #[On('next-slide')]
     public function next(): void
     {
