@@ -11,7 +11,7 @@ class HowDoesItWork extends Component
 
     public const int SLIDES = 6;
     public const string PREVIOUS = '/slides/introducing-yesql';
-    public const string NEXT = '/slides/the-end';
+    public const string NEXT = '/slides/benefits';
 
     public function render()
     {

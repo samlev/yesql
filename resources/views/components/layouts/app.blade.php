@@ -46,9 +46,9 @@
     }
   }"
   :class="{ 'dark': dark() }"
-  @keydown.meta.m.window="toggle"
-  @keydown.meta.r.window="resetMode"
-  @keydown.meta.backspace.window.prevent="reset"
+  @keydown.ctrl.m.window="toggle"
+  @keydown.ctrl.r.window="resetMode"
+  @keydown.crtl.backspace.window.prevent="reset"
   @keydown.left.window="prev"
   @keydown.backspace.window.prevent="prev"
   @keydown.right.window="next"
