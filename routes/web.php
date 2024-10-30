@@ -9,6 +9,8 @@ Route::get('/', Landing::class);
 Route::get('slides', Landing::class);
 Route::get('slides/why-nosql', Slides\WhyNosql::class);
 Route::get('slides/nosql-to-the-rescue', Slides\NosqlToTheRescue::class);
+Route::get('slides/nosql-problems', Slides\NosqlProblems::class);
+Route::get('slides/introducing-yesql', Slides\IntroducingYesql::class);
 
 
 Route::get('slides/the-end', Slides\TheEnd::class);

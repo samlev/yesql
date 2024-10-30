@@ -12,9 +12,9 @@ class NosqlToTheRescue extends Component
 {
     use HasSlides;
 
-    public const int SLIDES = 5;
+    public const int SLIDES = 1;
     public const string PREVIOUS = '/slides/why-nosql';
-    public const string NEXT = '/slides/the-end';
+    public const string NEXT = '/slides/nosql-problems';
 
     public function render(): View
     {
