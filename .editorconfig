@@ -6,13 +6,15 @@ end_of_line = lf
 indent_size = 4
 indent_style = space
 insert_final_newline = true
-trim_trailing_whitespace = true
-
-[*.md]
-trim_trailing_whitespace = false
 
 [*.{yml,yaml}]
 indent_size = 2
 
-[docker-compose.yml]
+[{docker-compose,vapor}.yml]
+indent_size = 4
+
+[*.{js,css,blade.php}]
+indent_size = 2
+
+[*.config.js]
 indent_size = 4

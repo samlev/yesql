@@ -15,6 +15,10 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
         },
+        gridTemplateRows: {
+            'title-body': 'minmax(4.5rem, 9rem) 1fr'
+        }
     },
+    darkMode: 'selector',
     plugins: [],
 };
