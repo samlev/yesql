@@ -11,7 +11,7 @@ Route::get('slides/why-nosql', Slides\WhyNosql::class);
 Route::get('slides/nosql-to-the-rescue', Slides\NosqlToTheRescue::class);
 
 
-Route::get('slides/the-end', Slides\NosqlToTheRescue::class);
+Route::get('slides/the-end', Slides\TheEnd::class);
 
 Route::get('/reset', function (Request $request) {
     $request->session()->invalidate();

@@ -11,9 +11,10 @@ use Livewire\Component;
 class NosqlToTheRescue extends Component
 {
     use HasSlides;
-    public const int SLIDES = 1;
+
+    public const int SLIDES = 5;
     public const string PREVIOUS = '/slides/why-nosql';
-    public const string NEXT = '/slides/why-nosql';
+    public const string NEXT = '/slides/the-end';
 
     public function render(): View
     {

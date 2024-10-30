@@ -2,14 +2,13 @@
 
 namespace App\Support;
 
-use Illuminate\Support\Str;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Locked;
 use Livewire\Attributes\On;
-use Livewire\Attributes\Session;
 use Livewire\Component;
 
 /**
+ * @property-read string $slide_key
  * @property-read int $total_slides
  * @property-read string $next_url
  * @property-read string $previous_url
@@ -19,10 +18,6 @@ use Livewire\Component;
 trait HasSlides
 {
     #[Locked]
-    public string $slide_key = '';
-
-    #[Locked]
-    #[Session(key: 'slide-{slide_key}')]
     public int $slide = 0;
 
     #[On('previous-slide')]
@@ -32,6 +27,8 @@ trait HasSlides
             $this->redirect($this->previous_url, navigate: true);
         } else {
             $this->slide--;
+
+            session()->put($this->slide_key, $this->slide);
         }
     }
 
@@ -42,12 +39,20 @@ trait HasSlides
             $this->redirect($this->next_url, navigate: true);
         } else {
             $this->slide++;
+
+            session()->put($this->slide_key, $this->slide);
         }
     }
 
     public function mountHasSlides(): void
     {
-        $this->slide_key = Str::snake($this::class);
+        $this->slide = session($this->slide_key, 0);
+    }
+
+    #[Computed]
+    protected function slideKey(): string
+    {
+        return sprintf('slide-%s', hash('md5', $this::class));
     }
 
     #[Computed]
@@ -65,6 +70,6 @@ trait HasSlides
     #[Computed]
     protected function nextUrl(): string
     {
-        return (string) ($this::NEXT ?? '/');
+        return (string) ($this::NEXT ?? '/slides/the-end');
     }
 }
