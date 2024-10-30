@@ -28,16 +28,16 @@ return [
 ];
 ```</x-markdown>
   </div>
-  <div x-transition x-show="$wire.slide === 3" wire:ignore class="flex flex-col gap-10">
+  <div x-transition x-show="$wire.slide >= 3" wire:ignore class="flex flex-col gap-10">
+    <p>...</p>
+  <div x-transition x-show="$wire.slide >= 4" wire:ignore class="flex flex-col gap-10">
     <p>...</p>
   </div>
-  <div x-transition x-show="$wire.slide === 4" wire:ignore class="flex flex-col gap-10">
-    <p>...</p>
-  </div>
-  <div x-transition x-show="$wire.slide === 5" wire:ignore class="flex flex-col gap-10">
+  <div x-transition x-show="$wire.slide >= 5" wire:ignore class="flex flex-col gap-10">
     <p>...Profit?</p>
   </div>
-  <div x-transition x-show="$wire.slide === 6" wire:ignore class="flex flex-col gap-10">
+  <div x-transition x-show="$wire.slide >= 6" wire:ignore class="flex flex-col gap-10">
     <p class="text-xl">Lose your data.</p>
+  </div>
   </div>
 </x-slides.title-and-body>

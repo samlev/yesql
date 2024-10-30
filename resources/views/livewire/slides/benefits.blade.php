@@ -1,4 +1,4 @@
-<x-slides.title-and-body title="What are the benefits?" class="text-4xl">
+<x-slides.title-and-body title="What are the benefits?" class="text-2xl">
   <div class="flex flex-col gap-10">
     <p class="text-lg">A solution looking for a problem</p>
     <h3 class="text-bold text-5xl">You don't need a lot of database compute</h3>
