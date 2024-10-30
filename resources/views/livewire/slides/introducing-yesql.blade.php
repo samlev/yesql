@@ -1,4 +1,4 @@
-<div>
+<div class="w-full">
   <x-slides.title x-show="$wire.slide === 0">
     <x-title>Introducing YeSQL!</x-title>
   </x-slides.title>
