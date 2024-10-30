@@ -1,4 +1,4 @@
-<x-slides.title x-on:previous-slide.window="Livewire.navigate('/slides/introducing-yesql')">
+<x-slides.title x-on:previous-slide.window="Livewire.navigate('/slides/how-does-it-work')">
   <x-title><span class="text-green-700 dark:text-green-300">YeS</span>QL</x-title>
   <x-sub-title>Questions/Comments</x-sub-title>
   <div class="flex items-center p-40 gap-10 h-20 w-full text-center">

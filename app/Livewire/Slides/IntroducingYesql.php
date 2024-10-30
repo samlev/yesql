@@ -12,7 +12,7 @@ class IntroducingYesql extends Component
 
     public const int SLIDES = 6;
     public const string PREVIOUS = '/slides/nosql-problems';
-    public const string NEXT = '/slides/the-end';
+    public const string NEXT = '/slides/how-does-it-work';
 
     public function render(): View
     {
