@@ -2,10 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  min-height: 0;
+@layer base {
+  * {
+    min-height: 0;
+  }
+  html {
+    min-height: 100dvh;
+  }
 }
 
-html {
-  min-height: 100dvh;
+.shiki {
+  @apply p-5 rounded bg-slate-200 text-base;
 }

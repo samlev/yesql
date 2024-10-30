@@ -6,5 +6,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', Landing::class);
 Route::get('slides', Landing::class);
-Route::get('slides/what-is-nosql', Slides\WhatIsNosql::class);
 Route::get('slides/why-nosql', Slides\WhyNosql::class);

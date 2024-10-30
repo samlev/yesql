@@ -16,7 +16,7 @@ export default {
             },
         },
         gridTemplateRows: {
-            'title-body': 'minmax(4.5rem, 9rem) 1fr'
+            'title-body': 'minmax(fit-content, 9rem) 1fr'
         }
     },
     darkMode: 'selector',
