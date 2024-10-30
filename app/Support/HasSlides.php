@@ -2,11 +2,11 @@
 
 namespace App\Support;
 
+use Illuminate\Support\Str;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Locked;
 use Livewire\Attributes\On;
 use Livewire\Attributes\Session;
-use Livewire\Attributes\Url;
 use Livewire\Component;
 
 /**
@@ -19,7 +19,10 @@ use Livewire\Component;
 trait HasSlides
 {
     #[Locked]
-    #[Session]
+    public string $slide_key = '';
+
+    #[Locked]
+    #[Session(key: 'slide-{slide_key}')]
     public int $slide = 0;
 
     #[On('previous-slide')]
@@ -40,6 +43,11 @@ trait HasSlides
         } else {
             $this->slide++;
         }
+    }
+
+    public function mountHasSlides(): void
+    {
+        $this->slide_key = Str::snake($this::class);
     }
 
     #[Computed]

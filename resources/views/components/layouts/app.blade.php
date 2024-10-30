@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ $title ?? 'Page Title' }}</title>
+  <title>{{ implode(' - ', array_filter(['YeSQL', $title ?? ''])) }}</title>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body
@@ -42,17 +42,17 @@
       }
     },
     reset() {
-      Livewire.navigate('/');
+      Livewire.navigate('/reset');
     }
   }"
   :class="{ 'dark': dark() }"
   @keydown.meta.m.window="toggle"
   @keydown.meta.r.window="resetMode"
+  @keydown.meta.backspace.window.prevent="reset"
   @keydown.left.window="prev"
   @keydown.backspace.window.prevent="prev"
   @keydown.right.window="next"
   @keydown.space.window.prevent="next"
-  @keydown.meta.backspace.window.prevent="reset"
   @mouseup.window="mouseNav($event)"
 >
   {{ $slot }}
